@@ -1,0 +1,247 @@
+/* Global Styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ca3e3e;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  background: url("muzehe.jpeg") no-repeat center center/cover;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-bottom: 4px solid #d14c24;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.logo {
+  max-width: 150px;
+  margin-right: 15px;
+}
+
+.project-name {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
+
+.page-title {
+  font-size: 36px;
+  color: #ffffff;
+  margin: 40px 0 10px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation Menu Styles */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 5px;
+  background-color: #357abd;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #285b8d;
+  transform: translateY(-2px);
+}
+
+/* Background Section Styles */
+.background-section {
+  padding: 50px 20px;
+  margin: 20px 0;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  color: white;
+  text-align: center;
+}
+
+/* Dashboard Overview Styles */
+#dashboard-overview {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.overview-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #333;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  color: #4a90e2;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: rgba(199, 173, 28, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+th {
+  background-color: rgba(212, 127, 16, 0.9);
+  color: white;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+td {
+  background-color: rgba(119, 115, 58, 0.9);
+  transition: background-color 0.3s ease;
+  color: #e4e8ec;
+}
+
+tr:hover td {
+  background-color: rgb(20, 20, 13);
+}
+
+/* Button Styles */
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #4a90e2;
+  color: white;
+  margin-top: 40px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #357abd;
+}
+
+/* Background Image for Sections (optional placeholders for background images) */
+#all-stock,
+#orders,
+#admin-actions {
+  background-size: cover;
+  padding: 30px;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Fields Styles */
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  margin: 10px 0;
+}
+
+input[type="text"]:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .overview-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  header {
+    padding: 30px 20px;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  input[type="text"] {
+    width: 90%;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}

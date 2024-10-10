@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buyers Dashboard | PriceWize Connect</title>
+    <link rel="stylesheet" href="buyers.css" />
+  </head>
+  <body>
+    <header>
+      <img src="logo1.png" alt="PriceWize Connect Logo" class="logo" />
+      <h1>Buyers Dashboard</h1>
+      <nav>
+        <a href="farmers.html">Farmers Dashboard</a>
+        <a href="admin.html">Admin Dashboard</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Section for buyers to request produce -->
+      <section id="buy-produce">
+        <h2>Request Produce</h2>
+        <form id="request-form">
+          <label for="request-product">Product Name:</label>
+          <input
+            type="text"
+            id="request-product"
+            name="request-product"
+            required
+            placeholder="e.g., Red Onions"
+          /><br />
+
+          <label for="request-quantity">Quantity (kg):</label>
+          <input
+            type="number"
+            id="request-quantity"
+            name="request-quantity"
+            required
+            min="1"
+          /><br />
+
+          <label for="request-location">Your Location:</label>
+          <input
+            type="text"
+            id="request-location"
+            name="request-location"
+            required
+            placeholder="e.g., Kigali"
+          /><br />
+
+          <button type="submit">Submit Request</button>
+        </form>
+      </section>
+
+      <!-- Section to display available produce -->
+      <section id="available-produce">
+        <h2>Available Produce</h2>
+        <p>Here you can view all the available produce:</p>
+        <table id="availableTable">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Quantity Available (kg)</th>
+              <th>Price per kg (RWF)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Available produce items will be displayed here -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Section to display buyer's past requests -->
+      <section id="past-requests">
+        <h2>Your Past Requests</h2>
+        <p>Here you can view all the requests you have submitted:</p>
+        <table id="requestTable">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Quantity (kg)</th>
+              <th>Location</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Past request items will be displayed here -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 PriceWize Connect. All rights reserved.</p>
+    </footer>
+
+    <script src="buyers.js"></script>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PriceWize Connect - Farmers Dashboard</title>
+    <link rel="stylesheet" href="farmers.css" />
+  </head>
+  <body>
+    <header>
+      <img src="logo.png" alt="PriceWize Connect Logo" class="logo" />
+      <h1>PriceWize Connect - Farmers Dashboard</h1>
+      <nav>
+        <ul>
+          <li><a href="farmers.html">Farmers</a></li>
+          <li><a href="buyers.html">Buyers</a></li>
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Farmer Login Section -->
+      <section id="farmer-login">
+        <h2>Farmer Login</h2>
+        <form id="login-form">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required /><br />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required /><br />
+
+          <button type="submit">Login</button>
+          <p>Don't have an account? <a href="#">Sign up here</a></p>
+        </form>
+      </section>
+
+      <!-- Section for farmer to input their location -->
+      <section id="farmer-location">
+        <h2>Your Location</h2>
+        <form id="location-form">
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" required /><br />
+
+          <button type="submit">Submit Location</button>
+        </form>
+      </section>
+
+      <!-- Section for farmer to add produce -->
+      <section id="add-produce">
+        <h2>Add Produce</h2>
+        <form id="produce-form">
+          <label for="product">Product Name:</label>
+          <input type="text" id="product" name="product" required /><br />
+
+          <label for="quantity">Quantity (kg):</label>
+          <input type="number" id="quantity" name="quantity" required /><br />
+
+          <label for="price">Price per kg (RWF):</label>
+          <input type="number" id="price" name="price" required /><br />
+
+          <button type="submit">Add to Stock</button>
+        </form>
+      </section>
+
+      <!-- Section to display farmer's stock -->
+      <section id="farmer-stock">
+        <h2>Your Stock</h2>
+        <table id="stockTable">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Quantity (kg)</th>
+              <th>Price per kg (RWF)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Stock items will be displayed here -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Section for submitting supply requests -->
+      <section id="supply-request">
+        <h2>Request to Supply Produce</h2>
+        <form id="supply-form">
+          <label for="supply-product">Product Name:</label>
+          <input
+            type="text"
+            id="supply-product"
+            name="supply-product"
+            required
+          /><br />
+
+          <label for="supply-quantity">Quantity (kg):</label>
+          <input
+            type="number"
+            id="supply-quantity"
+            name="supply-quantity"
+            required
+          /><br />
+
+          <button type="submit">Submit Supply Request</button>
+        </form>
+      </section>
+
+      <!-- Section for requesting to use storage facility -->
+      <section id="storage-request">
+        <h2>Request to Use Storage Facility</h2>
+        <form id="storage-form">
+          <label for="storage-location">Location of Produce:</label>
+          <input
+            type="text"
+            id="storage-location"
+            name="storage-location"
+            required
+          /><br />
+
+          <label for="storage-duration">Duration (days):</label>
+          <input
+            type="number"
+            id="storage-duration"
+            name="storage-duration"
+            required
+          /><br />
+
+          <button type="submit">Request Storage</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 PriceWize Connect. All rights reserved.</p>
+    </footer>
+
+    <script src="farmers.js"></script>
+  </body>
+</html>

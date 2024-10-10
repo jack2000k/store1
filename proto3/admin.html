@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Onion Storage Facility - PriceWize Connect</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="logo1.png" alt="PriceWize Connect Logo" class="logo" />
+        <h1 class="project-name">PriceWize Connect</h1>
+      </div>
+      <h2 class="page-title">Modern Onion Storage Facility</h2>
+      <nav>
+        <ul>
+          <li><a href="farmers.html">Farmers</a></li>
+          <li><a href="buyers.html">Buyers</a></li>
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Section for dashboard overview -->
+      <section id="dashboard-overview" class="background-section">
+        <h2>Dashboard Overview</h2>
+        <div class="overview-cards">
+          <div class="card">
+            Total Stock: <span id="total-stock">2500 kg</span>
+          </div>
+          <div class="card">
+            Total Orders: <span id="total-orders">15</span>
+          </div>
+          <div class="card">
+            Pending Orders: <span id="pending-orders">3</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section to view all stock -->
+      <section id="all-stock" class="background-section">
+        <h2>All Stock</h2>
+        <input
+          type="text"
+          id="stock-search"
+          placeholder="Search stock by product name..."
+        />
+        <table id="stockTable">
+          <thead>
+            <tr>
+              <th onclick="sortTable('stockTable', 0)">Product</th>
+              <th onclick="sortTable('stockTable', 1)">Quantity (kg)</th>
+              <th onclick="sortTable('stockTable', 2)">Price per kg (RWF)</th>
+              <th>Farmer</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Stock managed by admin will be displayed here -->
+          </tbody>
+        </table>
+        <button id="add-stock">Add New Stock</button>
+      </section>
+
+      <!-- Section to view orders -->
+      <section id="orders" class="background-section">
+        <h2>Orders</h2>
+        <input
+          type="text"
+          id="orders-search"
+          placeholder="Search orders by product name..."
+        />
+        <table id="ordersTable">
+          <thead>
+            <tr>
+              <th onclick="sortTable('ordersTable', 0)">Product</th>
+              <th onclick="sortTable('ordersTable', 1)">Quantity (kg)</th>
+              <th>Buyer</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Orders will be displayed here -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Section for admin actions -->
+      <section id="admin-actions" class="background-section">
+        <h2>Admin Actions</h2>
+        <button id="generate-report">Generate Stock Report</button>
+        <button id="manage-users">Manage Users</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 PriceWize Connect. All rights reserved.</p>
+    </footer>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
